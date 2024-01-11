@@ -28,7 +28,7 @@ Our code was implemented in following environment：
 
 Step 2: Data preparation
 -------------
-Prepare the data according to our paper, make sure that the data for each patient comprise 81 CEUS image crops.
+Prepare the data according to our paper, make sure that the data for each patient comprise the required number of CEUS image crops.
 You need to split the patients into five folds to yield a training set, a validation set, and a test set.
 Then, save the data path and the corresponding label in a `.npy` file for each set. For example:
 * train.npy  ---  [["train_path_1", "0"], ["train_path_2", "1"], ..., ["train_path_N", "0"]]
