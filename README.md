@@ -17,8 +17,8 @@ Step 0: Preparation of environment
 -------------
 Our code is implemented in following environment：
 
-* Python ==
-* torch >＝1.0.0
+* Python == 3.7.0
+* torch == 1.7.0
 
 Step 1: Data preparation
 -------------
