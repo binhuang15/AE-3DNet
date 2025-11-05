@@ -13,7 +13,6 @@ This repository is the official implementation of AE-3DNet, as presented in our 
   - [Step 1: Data Preparation](#step-1-data-preparation)
   - [Step 2: Model Training](#step-2-model-training)
   - [Step 3: Model Evaluation](#step-3-model-evaluation)
-- [Citation](#citation)
 
 ## Repository Structure
 
@@ -113,3 +112,19 @@ Run the script [`kfold_train.py`](./kfold_train.py) to train AE-3DNet. This scri
 
 ```bash
 python kfold_train.py --data_path ./ALL_Data
+```
+During training, checkpoints with the best performance on the validation set will be saved in the `model_checkpoint` folder.
+
+### Step 3: Model Evaluation
+
+Run the script [`kfold_test.py`](./kfold_test.py) to evaluate the model's performance on the `test.npy` files.
+
+1.  Before running, select the best checkpoint from each fold (saved in `model_checkpoint`) and move them into a new folder (e.g., `model_for_test`).
+
+2.  Run the test script:
+
+```bash
+python kfold_test.py --data_path ./ALL_Data --model_save_name ./model_for_test
+```
+
+This script will output the ROC curve and the corresponding AUC of AE-3DNet on the test set.
